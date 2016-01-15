@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="mainsUses">
+  <useCaseModelRootMoniker Id="915bf46d-f1d1-4cdf-bcbd-e2e34752f92e" />
+  <nestedChildShapes>
+    <actorShape Id="fb4333d4-b2bc-4f5d-aabb-833e8fb7b853" absoluteBounds="0.875, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="5a92a2d7-985c-4c3b-af81-6d78e8b760fb" LastKnownName="user" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="5eb16978-e31c-4301-bdd4-6105e58a320f" absoluteBounds="2.5, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a14a6687-d250-44cc-a73b-519a6a103661" LastKnownName="document index" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(1.375 : 1.325); (2.53576165455737 : 1.09284766908853)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="a48408d6-8d94-4b97-86b4-f29f5742eb3e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fb4333d4-b2bc-4f5d-aabb-833e8fb7b853" />
+        <useCaseShapeMoniker Id="5eb16978-e31c-4301-bdd4-6105e58a320f" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="b6ad20a1-a244-49d7-81c0-9e305928aeab" absoluteBounds="2.625, 1.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="79814358-1c5c-4da0-aca4-2596d6019cb0" LastKnownName="Search" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(1.375 : 1.4375); (2.67778640450004 : 1.76319660112501)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="ea938e97-ab83-462e-bf40-7b945620c5d0" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fb4333d4-b2bc-4f5d-aabb-833e8fb7b853" />
+        <useCaseShapeMoniker Id="b6ad20a1-a244-49d7-81c0-9e305928aeab" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

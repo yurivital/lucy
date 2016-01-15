@@ -1,0 +1,1896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b6593392-0742-456e-93e6-970724fae553"
+  name="Lucy" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="99499dd7-3ce9-48f4-a32c-c180c3d90053"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8d463f8a-792f-460e-afc6-7bd34d581b8d">
+          <propertyInstance
+            Id="c8163977-268a-4c55-a0e8-e8078b17ea64"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="99e1defe-915a-4a15-a86b-be1055038da4">
+          <propertyInstance
+            Id="d14f24dc-1924-4899-84df-b983e5d6bdd0"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="90d60034-b7c4-4d67-9162-5c03cfd6930a">
+          <propertyInstance
+            Id="ed80c15b-87d5-4b49-b90b-2b9531a35858"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="94066c38-4e69-42e3-8885-517525b261a9"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c1004803-60f7-4e9c-9ff5-e70596d686bd">
+          <propertyInstance
+            Id="54b8bc2a-2870-483d-92ef-35198ba3fca0"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="81f89166-592d-4b73-bb80-e442d049e033">
+          <propertyInstance
+            Id="80770b4f-37d4-461c-aa63-b96859f3c13c"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="6095a7fe-928d-46df-aa77-1724a9994e80">
+          <propertyInstance
+            Id="d51e3398-b0c1-4c67-a14e-8f502a7c5c85"
+            name="ProjectPath"
+            value="ClassTemplate=..\LucyLib\LucyLib.csproj|EnumTemplate=..\LucyLib\LucyLib.csproj|InterfaceTemplate=..\LucyLib\LucyLib.csproj|StructTemplate=..\LucyLib\LucyLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="e96580e0-c4aa-4821-938c-ee96f0524e7d">
+          <propertyInstance
+            Id="afcc8e99-2f5c-4a8f-9217-eeb375dd9203"
+            name="TargetDirectory"
+            value="ClassTemplate={PackageStructure}|EnumTemplate={PackageStructure}|InterfaceTemplate={PackageStructure}|StructTemplate={PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="5be4cdbd-716b-4a9e-a44d-838c67dfe4a7">
+          <propertyInstance
+            Id="b599713b-ab82-4de8-b94b-83c652f843b1"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="0bb36733-1c55-480a-ba48-6ea39ee17ea3">
+          <propertyInstance
+            Id="054e6452-6cd3-417e-8528-f78e655c5a1d"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="2131c108-f480-4001-ab48-841ddf97bc3e">
+          <propertyInstance
+            Id="8e66ee89-29c5-4ef8-b830-518cf81d55fd"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="2f5274d2-1019-4d9f-ab59-a7a3f4da81cc">
+      <profileInstance
+        Id="c0c92053-7fd5-4af6-b453-a00b0a0745a6"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="e7693238-8397-4825-b9e9-9b330cb7f7b5">
+      <profileInstance
+        Id="e5f4f659-7905-420b-9ae2-f25c8d817ebe"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ea39ef29-6798-410e-b157-a3dfa99671fd"
+        LastKnownName="Lucy.Core"
+        LastKnownLocation="Package_1923.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0178f060-89b8-43e9-a6e3-d03a481d62bb"
+        LastKnownName="Lucy.Document"
+        LastKnownLocation="Package_1951.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="53844cbd-ea3a-4a03-a817-c6f93c5d4ca4"
+        LastKnownName="Lucy.Extensibility"
+        LastKnownLocation="Package_1952.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="692a9678-47c6-4bee-a346-0f9348f27ec3"
+        name="user"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="e1724ab0-7be3-4eec-9880-2a48bb5c456b"
+            name="add to">
+            <useCaseMoniker
+              Id="238959cf-8604-4acd-b602-ef9ce4f2f9c6"
+              LastKnownName="document index"
+              LastKnownLocation="LucyModeling.uml" />
+          </dependency>
+          <dependency
+            Id="00adcee0-b0ad-4a43-aafa-abc0973d6bc0"
+            name="perform">
+            <useCaseMoniker
+              Id="d04724eb-63eb-49d4-a4e5-f5f5549ce304"
+              LastKnownName="Search"
+              LastKnownLocation="LucyModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="238959cf-8604-4acd-b602-ef9ce4f2f9c6"
+        name="document index"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d04724eb-63eb-49d4-a4e5-f5f5549ce304"
+        name="Search"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="65bb5598-2ae4-447e-bb1f-653215d27939"
+        name="Indexing"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="589e617d-ae92-4002-914e-da86d5692c50"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+                LastKnownName="locationObserver : LocationObserver"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="dec3e6c0-087e-47aa-a303-f3f0970089f3"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8314c11f-5c02-4367-98e6-1a55bfae8198"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="af753d9f-f612-40e8-bc30-b1c23cafabc5"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3b61e167-a2e8-40ef-917b-7b15026ce155"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8314c11f-5c02-4367-98e6-1a55bfae8198"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c3b81972-d47b-48d6-a2a2-96d2de78a2b6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+                LastKnownName="locationObserver : LocationObserver"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="12def9a4-ce97-44fc-96fd-54436998ab2b"
+            name="MessageOccurrenceSpecification11">
+            <event>
+              <sendOperationEventMoniker
+                Id="afd423f1-1bad-4fd5-a400-dcf81963f0e4"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="af753d9f-f612-40e8-bc30-b1c23cafabc5"
+            name="MessageOccurrenceSpecification12">
+            <event>
+              <receiveOperationEventMoniker
+                Id="326e714c-18ea-444e-afe2-8c7e294a75d2"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+                LastKnownName="locationObserver : LocationObserver"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3b61e167-a2e8-40ef-917b-7b15026ce155"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+                LastKnownName="locationObserver : LocationObserver"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1118bbba-aebf-4e21-b2b5-7a4f782d4231"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="dec3e6c0-087e-47aa-a303-f3f0970089f3"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e4124953-db17-4900-b3a5-0d4836524a18"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+                LastKnownName="locationObserver : LocationObserver"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="00d2d72f-7b99-488f-8ac5-6b64ef075e4a"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="065636f6-9c7e-41b0-a15e-3dbd3e958231"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="de98c36b-e0fc-4606-86ea-92e63084dc67"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2bdea46a-bbb3-41be-9ba8-1b0aeffaac68"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e9282183-a619-41d7-83b5-fb1a259a67cf"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="de98c36b-e0fc-4606-86ea-92e63084dc67"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="83d671c2-39dd-4936-9669-8bb1171b3548"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2bdea46a-bbb3-41be-9ba8-1b0aeffaac68"
+            name="MessageOccurrenceSpecification16">
+            <event>
+              <receiveOperationEventMoniker
+                Id="676b0947-c5e3-4e07-bf36-ab6ced649429"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="858b3276-24c1-4bb5-88b4-b661c8ca4001"
+            name="MessageOccurrenceSpecification15">
+            <event>
+              <sendOperationEventMoniker
+                Id="1df6a2e5-751e-4059-8eb2-54a72646ea9e"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ba620f61-697c-4be6-90ff-4d2c1d182cfc"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e9282183-a619-41d7-83b5-fb1a259a67cf"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="065636f6-9c7e-41b0-a15e-3dbd3e958231"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2f52024c-c899-48d2-9d1c-07e0b6f3a735"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+                LastKnownName="pluginManager : PluginManager"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <combinedFragment
+            Id="8af4b27c-1943-423e-a1cd-0fef73ff089f"
+            name="CombinedFragment1"
+            interactionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="fb598677-c4d5-4cbc-92e6-bfa2ffa2a7e5"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                    LastKnownName="discoveryProvider : DiscoveryProvider"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <lifelineMoniker
+                    Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                    LastKnownName="user : user"
+                    LastKnownLocation="LucyModeling.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="4ec8004d-1c9b-46a6-b0cf-d7fa1578433e">
+                    <maxInt>
+                      <literalString
+                        Id="aa4c1d2f-519c-47bf-8c15-708807cdcc8e"
+                        name="LiteralString1"
+                        value="NumberOfLocations" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="a72d99f4-fde7-463a-ae0e-5c4affb12ba5"
+                        name="LiteralString2"
+                        value="0" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c00e6355-41c7-4b50-abac-e393a3d10beb"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0f59a48c-b66b-436d-a9d7-027dbacb130f"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="52746d72-4b8d-4ca6-ae89-e2a88713db15"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1504bcbb-bb58-4cac-b3f6-59361daa14e9"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="LucyModeling.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="52746d72-4b8d-4ca6-ae89-e2a88713db15"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c00e6355-41c7-4b50-abac-e393a3d10beb"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d2da6fe3-e158-4fbd-8795-bb2e1508c563"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9a62e445-2224-444e-8d9d-85831f5e269c"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3bb0f846-bbd1-457c-9b83-38fe9a42db2f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="cf98eee7-8524-4d7b-830d-b3f490a99c57"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0201cbcc-cfa6-4e67-bf8c-05cc887b1195"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3bb0f846-bbd1-457c-9b83-38fe9a42db2f"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3ff265b1-175c-4e25-9c1a-f16c6ce7f2aa"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="04133683-a171-4127-acbb-7c7d4109e3d4"
+            name="MessageOccurrenceSpecification41">
+            <event>
+              <sendOperationEventMoniker
+                Id="ab2a6c97-4c4c-4383-b242-a5ba957a3c70"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cf98eee7-8524-4d7b-830d-b3f490a99c57"
+            name="MessageOccurrenceSpecification42">
+            <event>
+              <receiveOperationEventMoniker
+                Id="a0bdde89-20e9-4532-8141-78026285b73a"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cb208653-68af-4b0f-9b65-b1c191b4ed6d"
+            name="MessageOccurrenceSpecification44">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0201cbcc-cfa6-4e67-bf8c-05cc887b1195"
+            name="MessageOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9a62e445-2224-444e-8d9d-85831f5e269c"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="06fc5c07-ba3c-4634-b7c4-8fb9dd0d6e73"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0f59a48c-b66b-436d-a9d7-027dbacb130f"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+                LastKnownName="discoveryProvider : DiscoveryProvider"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1504bcbb-bb58-4cac-b3f6-59361daa14e9"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <combinedFragment
+            Id="457ca455-dc53-4376-96cd-8e95c006b6ac"
+            name="CombinedFragment2"
+            interactionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="17b1c261-6438-45bb-ad3d-5a73fbaf1eca"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                    LastKnownName="iDiscovery : IDiscovery"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <lifelineMoniker
+                    Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                    LastKnownName="user : user"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <lifelineMoniker
+                    Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                    LastKnownName="documentIndex : DocumentIndex"
+                    LastKnownLocation="LucyModeling.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="42304cee-64e1-4726-96f3-78c1d530d3d4">
+                    <maxInt>
+                      <literalString
+                        Id="c1077e5b-ff21-45bb-b710-23fdde258664"
+                        name="LiteralString1"
+                        value="NumberOfDocs" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="e202dfa7-7b69-4035-a17c-0d03d12f5fe5"
+                        name="LiteralString2"
+                        value="0" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="db7900aa-cad5-42e5-b470-d791ee3cbee9"
+                    LastKnownName="OperandOccurrenceSpecification17"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="35c32015-293d-4b08-a9d8-2c070c0120b4"
+                    LastKnownName="OperandOccurrenceSpecification18"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0530ed62-4c70-4c43-afa6-9fe18152c7e2"
+                    LastKnownName="OperandOccurrenceSpecification19"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="aad5568a-65b3-4372-95af-596fe2c5cc5a"
+                    LastKnownName="OperandOccurrenceSpecification20"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="18cc0d79-80f2-4d7d-b07c-fb5f38b49fe3"
+                    LastKnownName="OperandOccurrenceSpecification21"
+                    LastKnownLocation="LucyModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="ea17247e-7086-4b66-80c0-992ea12b6442"
+                    LastKnownName="OperandOccurrenceSpecification22"
+                    LastKnownLocation="LucyModeling.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="0530ed62-4c70-4c43-afa6-9fe18152c7e2"
+            name="OperandOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="db7900aa-cad5-42e5-b470-d791ee3cbee9"
+            name="OperandOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="18cc0d79-80f2-4d7d-b07c-fb5f38b49fe3"
+            name="OperandOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="79d30213-0d2b-40d5-91cf-57f4d7c96524"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="432a263e-8083-429b-ae0d-23b92709a1c4"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7b63866f-f255-4bee-a7d4-7adb524d5b82"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2685f898-372b-46fa-a774-e9b55e4a7497"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bad2bc70-645d-4918-ac9e-2ec50e5cb083"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7b63866f-f255-4bee-a7d4-7adb524d5b82"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d0c82b62-3bcc-42ab-91b8-46132b7fe16f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2685f898-372b-46fa-a774-e9b55e4a7497"
+            name="MessageOccurrenceSpecification24">
+            <event>
+              <receiveOperationEventMoniker
+                Id="e34065bd-89af-45c6-ab8c-59a74288f923"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e69845e9-3b73-498b-a951-3bda84c131f0"
+            name="MessageOccurrenceSpecification23">
+            <event>
+              <sendOperationEventMoniker
+                Id="cc064661-8f1d-4dc9-b40a-982785732236"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8904e8b3-660e-4c2b-94a0-4ace551a70e2"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bad2bc70-645d-4918-ac9e-2ec50e5cb083"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="432a263e-8083-429b-ae0d-23b92709a1c4"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="09178c6d-68d4-40dd-a9e4-ef545a38fe75"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="73f6c56a-3c46-4d39-9b4a-e37761317b76"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="58bcd925-0026-49f6-944a-f1290eb1c9b4"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="b04229b5-9cfe-4840-9b57-9bd537a38f89"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="05696c01-4dc0-46b5-9e5d-44526d144c7e"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c7f8a105-a8ee-4125-bb38-987f28230ff7"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="b04229b5-9cfe-4840-9b57-9bd537a38f89"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="39098861-bfa5-460f-b729-494a34dc703d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="890f75ad-e6bf-41ef-8b59-5d72ad1592de"
+            name="MessageOccurrenceSpecification19">
+            <event>
+              <sendOperationEventMoniker
+                Id="24da6fa9-7082-4519-976d-38d24e502f25"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="05696c01-4dc0-46b5-9e5d-44526d144c7e"
+            name="MessageOccurrenceSpecification20">
+            <event>
+              <receiveOperationEventMoniker
+                Id="f6d59353-45c4-4121-bfe9-5455cce56937"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c7f8a105-a8ee-4125-bb38-987f28230ff7"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="070a8d28-7d55-4eaa-9ef0-5f086c2fe6bf"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="58bcd925-0026-49f6-944a-f1290eb1c9b4"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1bf8493c-e0aa-43d6-98c3-2ea6db6b2d50"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="aad5568a-65b3-4372-95af-596fe2c5cc5a"
+            name="OperandOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ea17247e-7086-4b66-80c0-992ea12b6442"
+            name="OperandOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="35c32015-293d-4b08-a9d8-2c070c0120b4"
+            name="OperandOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+                LastKnownName="iDiscovery : IDiscovery"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="55b0cfb3-10c6-4352-bf5f-940183333fbd"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="acfab484-308e-4e35-b13e-f519059a56c7"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="LucyModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="6d49658f-5da5-4c7c-b31e-dc7d151b9226"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="LucyModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b5153a19-b0c0-4d10-939c-57da7fe30bc9"
+                LastKnownName="MessageOccurrenceSpecification46"
+                LastKnownLocation="LucyModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="6d49658f-5da5-4c7c-b31e-dc7d151b9226"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2659a7b0-fedf-4f47-b78f-355335192014"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b5153a19-b0c0-4d10-939c-57da7fe30bc9"
+            name="MessageOccurrenceSpecification46">
+            <event>
+              <receiveOperationEventMoniker
+                Id="71bb7e9d-ee79-44fd-9eb4-d83e30da012c"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cbb19dcd-beff-4e16-9475-37bc10862356"
+            name="MessageOccurrenceSpecification45">
+            <event>
+              <sendOperationEventMoniker
+                Id="d73ccb7e-db12-46e8-92d8-663852296b90"
+                LastKnownLocation="LucyModeling.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b5915ab-7d92-412f-a455-e707cc858414"
+                LastKnownName="user : user"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="acfab484-308e-4e35-b13e-f519059a56c7"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4d4f504d-7fda-47de-831a-80a4929c159c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LucyModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+                LastKnownName="documentIndex : DocumentIndex"
+                LastKnownLocation="LucyModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="0b5915ab-7d92-412f-a455-e707cc858414"
+            name="user : user"
+            isActor="true"
+            lifelineDisplayName="user : user">
+            <represents>
+              <propertyMoniker
+                Id="3dce65e5-d5ac-4aab-bcb4-e2b0db682ce5"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="12def9a4-ce97-44fc-96fd-54436998ab2b"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1118bbba-aebf-4e21-b2b5-7a4f782d4231"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="858b3276-24c1-4bb5-88b4-b661c8ca4001"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ba620f61-697c-4be6-90ff-4d2c1d182cfc"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="52746d72-4b8d-4ca6-ae89-e2a88713db15"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="04133683-a171-4127-acbb-7c7d4109e3d4"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="cb208653-68af-4b0f-9b65-b1c191b4ed6d"
+                LastKnownName="MessageOccurrenceSpecification44"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1504bcbb-bb58-4cac-b3f6-59361daa14e9"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0530ed62-4c70-4c43-afa6-9fe18152c7e2"
+                LastKnownName="OperandOccurrenceSpecification19"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e69845e9-3b73-498b-a951-3bda84c131f0"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8904e8b3-660e-4c2b-94a0-4ace551a70e2"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="890f75ad-e6bf-41ef-8b59-5d72ad1592de"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="070a8d28-7d55-4eaa-9ef0-5f086c2fe6bf"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="aad5568a-65b3-4372-95af-596fe2c5cc5a"
+                LastKnownName="OperandOccurrenceSpecification20"
+                LastKnownLocation="LucyModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="cbb19dcd-beff-4e16-9475-37bc10862356"
+                LastKnownName="MessageOccurrenceSpecification45"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="32870bac-60e2-4465-ae4a-ac72e23ec652"
+            name="locationObserver : LocationObserver"
+            isActor="false"
+            lifelineDisplayName="locationObserver : LocationObserver">
+            <represents>
+              <propertyMoniker
+                Id="b6c977be-0107-4e93-8157-48a3fc21a3c5"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="8314c11f-5c02-4367-98e6-1a55bfae8198"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="dec3e6c0-087e-47aa-a303-f3f0970089f3"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1a229f9e-aa63-4ae8-97dc-aef2fcb6d163"
+            name="pluginManager : PluginManager"
+            isActor="false"
+            lifelineDisplayName="pluginManager : PluginManager">
+            <represents>
+              <propertyMoniker
+                Id="563f49ae-bfae-4c93-91a2-c207938da234"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="de98c36b-e0fc-4606-86ea-92e63084dc67"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="065636f6-9c7e-41b0-a15e-3dbd3e958231"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="068a3a79-4918-4ee1-a694-d1fc0d65f063"
+            name="discoveryProvider : DiscoveryProvider"
+            isActor="false"
+            lifelineDisplayName="discoveryProvider : DiscoveryProvider">
+            <represents>
+              <propertyMoniker
+                Id="90ad7424-5a91-41b5-96e7-5433874d510a"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="c00e6355-41c7-4b50-abac-e393a3d10beb"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3bb0f846-bbd1-457c-9b83-38fe9a42db2f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9a62e445-2224-444e-8d9d-85831f5e269c"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0f59a48c-b66b-436d-a9d7-027dbacb130f"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ed08f82b-7005-4d4f-9aae-2b75ff3e9737"
+            name="iDiscovery : IDiscovery"
+            isActor="false"
+            lifelineDisplayName="iDiscovery : IDiscovery">
+            <represents>
+              <propertyMoniker
+                Id="df450663-de9b-473e-a3aa-cf8bd17fd328"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="db7900aa-cad5-42e5-b470-d791ee3cbee9"
+                LastKnownName="OperandOccurrenceSpecification17"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7b63866f-f255-4bee-a7d4-7adb524d5b82"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="432a263e-8083-429b-ae0d-23b92709a1c4"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="35c32015-293d-4b08-a9d8-2c070c0120b4"
+                LastKnownName="OperandOccurrenceSpecification18"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ba236d4c-86f2-4e8e-ae46-427163071535"
+            name="documentIndex : DocumentIndex"
+            isActor="false"
+            lifelineDisplayName="documentIndex : DocumentIndex">
+            <represents>
+              <propertyMoniker
+                Id="1ea09d58-68f5-45a5-90f1-eb190a2be4c7"
+                LastKnownLocation="LucyModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="18cc0d79-80f2-4d7d-b07c-fb5f38b49fe3"
+                LastKnownName="OperandOccurrenceSpecification21"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b04229b5-9cfe-4840-9b57-9bd537a38f89"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="58bcd925-0026-49f6-944a-f1290eb1c9b4"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="LucyModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="ea17247e-7086-4b66-80c0-992ea12b6442"
+                LastKnownName="OperandOccurrenceSpecification22"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6d49658f-5da5-4c7c-b31e-dc7d151b9226"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="LucyModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="acfab484-308e-4e35-b13e-f519059a56c7"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="LucyModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="f6ec809b-fa7d-471d-b8d0-d7123d875488"
+            name="Add location"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false"
+            signatureText="+ AddLocation(uri : String)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="12def9a4-ce97-44fc-96fd-54436998ab2b"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="af753d9f-f612-40e8-bc30-b1c23cafabc5"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0edadcc6-3e43-4c0e-84ba-4513d61d8674"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3b61e167-a2e8-40ef-917b-7b15026ce155"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1118bbba-aebf-4e21-b2b5-7a4f782d4231"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a4e5f010-c4fb-4149-a68c-108c877a28e9"
+            name="Load Avaible Plugins"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false"
+            signatureText="+ Load()">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="858b3276-24c1-4bb5-88b4-b661c8ca4001"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2bdea46a-bbb3-41be-9ba8-1b0aeffaac68"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e522b260-0476-4d40-b305-a361fe26979d"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e9282183-a619-41d7-83b5-fb1a259a67cf"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ba620f61-697c-4be6-90ff-4d2c1d182cfc"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e562b153-1f5f-4b96-98df-60568942f372"
+            name="Get an instance of Discovery"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false"
+            signatureText="+ GetDiscovery(uri : String) : Lucy::Lucy.Document::IDiscovery">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="04133683-a171-4127-acbb-7c7d4109e3d4"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="cf98eee7-8524-4d7b-830d-b3f490a99c57"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="432bc704-cc2a-40b7-b992-c6d734f93090"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0201cbcc-cfa6-4e67-bf8c-05cc887b1195"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="cb208653-68af-4b0f-9b65-b1c191b4ed6d"
+                LastKnownName="MessageOccurrenceSpecification44"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="501a4110-6f5e-481f-9a17-32bb5468495a"
+            name="List all documents"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false"
+            signatureText="+ Discover(uri : DocumentLocation)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e69845e9-3b73-498b-a951-3bda84c131f0"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2685f898-372b-46fa-a774-e9b55e4a7497"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2613eae9-91c4-4021-8977-b68deb22b0e9"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bad2bc70-645d-4918-ac9e-2ec50e5cb083"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8904e8b3-660e-4c2b-94a0-4ace551a70e2"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f02cfa7d-89cc-43a5-b7cd-2bf3fa0d928a"
+            name="Add to index"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false"
+            signatureText="+ Add(doc : DocumentIdentity)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="890f75ad-e6bf-41ef-8b59-5d72ad1592de"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="05696c01-4dc0-46b5-9e5d-44526d144c7e"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0e9b5590-3efb-4437-a73b-d3390784e8a6"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c7f8a105-a8ee-4125-bb38-987f28230ff7"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="070a8d28-7d55-4eaa-9ef0-5f086c2fe6bf"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5c872a8a-35fc-4dd8-838f-c8b8788faf4d"
+            name="Perfom indexing"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false"
+            signatureText="+ Scan()">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="cbb19dcd-beff-4e16-9475-37bc10862356"
+                LastKnownName="MessageOccurrenceSpecification45"
+                LastKnownLocation="LucyModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b5153a19-b0c0-4d10-939c-57da7fe30bc9"
+                LastKnownName="MessageOccurrenceSpecification46"
+                LastKnownLocation="LucyModeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="3dce65e5-d5ac-4aab-bcb4-e2b0db682ce5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="692a9678-47c6-4bee-a346-0f9348f27ec3"
+                LastKnownName="user"
+                LastKnownLocation="LucyModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ebd39084-665e-4233-8d62-d7aee5fa5971"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="8645aaca-c05d-46b0-b0ec-2088e789df1a"
+                LastKnownName="DocumentIndex"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fd52eaa3-350a-48eb-b157-d5f26a077a60"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="168a0f88-b0af-4fdb-9270-707a09da8132"
+                LastKnownName="FolderDiscovery"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b6c977be-0107-4e93-8157-48a3fc21a3c5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3f1c1fc9-17a6-40c5-a2fb-a98204b007cc"
+                LastKnownName="LocationObserver"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="563f49ae-bfae-4c93-91a2-c207938da234"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3dd0eb65-79f0-4cdb-90be-4440269db804"
+                LastKnownName="PluginManager"
+                LastKnownLocation="Package_1923.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1ea09d58-68f5-45a5-90f1-eb190a2be4c7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="8645aaca-c05d-46b0-b0ec-2088e789df1a"
+                LastKnownName="DocumentIndex"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df450663-de9b-473e-a3aa-cf8bd17fd328"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="55a64fc0-88cc-4194-89d0-061e510aa118"
+                LastKnownName="IDiscovery"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="90ad7424-5a91-41b5-96e7-5433874d510a"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="e2e7b94c-26cf-4bc7-8d47-b74a7a8aa14c"
+                LastKnownName="DiscoveryProvider"
+                LastKnownLocation="Package_1951.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c3b81972-d47b-48d6-a2a2-96d2de78a2b6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e4124953-db17-4900-b3a5-0d4836524a18"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="afd423f1-1bad-4fd5-a400-dcf81963f0e4">
+        <operation>
+          <operationMoniker
+            Id="949fabc4-79b9-468b-bb0a-45b111634b52"
+            LastKnownName="AddLocation"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="326e714c-18ea-444e-afe2-8c7e294a75d2">
+        <operation>
+          <operationMoniker
+            Id="949fabc4-79b9-468b-bb0a-45b111634b52"
+            LastKnownName="AddLocation"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="83d671c2-39dd-4936-9669-8bb1171b3548"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2f52024c-c899-48d2-9d1c-07e0b6f3a735"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="1df6a2e5-751e-4059-8eb2-54a72646ea9e">
+        <operation>
+          <operationMoniker
+            Id="856fe93c-e2b7-4b88-bb8b-84293575ddb7"
+            LastKnownName="Load"
+            LastKnownLocation="Package_1923.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="676b0947-c5e3-4e07-bf36-ab6ced649429">
+        <operation>
+          <operationMoniker
+            Id="856fe93c-e2b7-4b88-bb8b-84293575ddb7"
+            LastKnownName="Load"
+            LastKnownLocation="Package_1923.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d0c82b62-3bcc-42ab-91b8-46132b7fe16f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="09178c6d-68d4-40dd-a9e4-ef545a38fe75"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="cc064661-8f1d-4dc9-b40a-982785732236">
+        <operation>
+          <operationMoniker
+            Id="b4642500-f24d-4c35-ad3f-9d1e2f0174d2"
+            LastKnownName="Discover"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="e34065bd-89af-45c6-ab8c-59a74288f923">
+        <operation>
+          <operationMoniker
+            Id="b4642500-f24d-4c35-ad3f-9d1e2f0174d2"
+            LastKnownName="Discover"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3ff265b1-175c-4e25-9c1a-f16c6ce7f2aa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="06fc5c07-ba3c-4634-b7c4-8fb9dd0d6e73"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="ab2a6c97-4c4c-4383-b242-a5ba957a3c70">
+        <operation>
+          <operationMoniker
+            Id="49a66959-dbfe-42e4-97db-17c6ef023ed3"
+            LastKnownName="GetDiscovery"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="a0bdde89-20e9-4532-8141-78026285b73a">
+        <operation>
+          <operationMoniker
+            Id="49a66959-dbfe-42e4-97db-17c6ef023ed3"
+            LastKnownName="GetDiscovery"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="39098861-bfa5-460f-b729-494a34dc703d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1bf8493c-e0aa-43d6-98c3-2ea6db6b2d50"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="24da6fa9-7082-4519-976d-38d24e502f25">
+        <operation>
+          <operationMoniker
+            Id="bfc63b53-2b2c-435a-8ba3-a723670735b9"
+            LastKnownName="Add"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="f6d59353-45c4-4121-bfe9-5455cce56937">
+        <operation>
+          <operationMoniker
+            Id="bfc63b53-2b2c-435a-8ba3-a723670735b9"
+            LastKnownName="Add"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2659a7b0-fedf-4f47-b78f-355335192014"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4d4f504d-7fda-47de-831a-80a4929c159c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="d73ccb7e-db12-46e8-92d8-663852296b90">
+        <operation>
+          <operationMoniker
+            Id="5573e295-1935-4673-99eb-b48ca8dd5710"
+            LastKnownName="Scan"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="71bb7e9d-ee79-44fd-9eb4-d83e30da012c">
+        <operation>
+          <operationMoniker
+            Id="5573e295-1935-4673-99eb-b48ca8dd5710"
+            LastKnownName="Scan"
+            LastKnownLocation="Package_1951.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cd92a96b-bcb8-49a4-ad1d-8cce41985b3f"
+        LastKnownName="Lucy.Plugin.Parsers"
+        LastKnownLocation="Package_0744.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,5 @@
+﻿Hello World,
+
+This is a document with 3 chunks of text.
+
+Goodbye !

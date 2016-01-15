@@ -1,0 +1,57 @@
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Lucy.Core;
+using System.IO;
+
+namespace Lucy.Test.Lucy.Document
+{
+    [TestClass]
+    public class DocumentIdentityTest
+    {
+        public const string fileA = "TestMaterial\\Level 1\\document1A.txt";
+        public const string fileB = "TestMaterial\\Level 1\\document1B.txt";
+
+        [TestMethod, TestCategory("Core")]
+        public void ComparisonPartialyLoaded()
+        {
+            // ref
+            DocumentIdentity docA = new DocumentIdentity();
+            docA.FilePath = new FileInfo(fileA);
+            // same file
+            DocumentIdentity docAbis = new DocumentIdentity();
+            docAbis.FilePath = new FileInfo(fileA);
+            Assert.IsTrue(docA.CompareTo(docAbis) == 0, "Same files");
+            
+            // File differ
+            DocumentIdentity docB = new DocumentIdentity();
+            docB.FilePath = new FileInfo(fileB);
+            Assert.IsFalse(docA.CompareTo(docB) == 0, "Not same files");
+
+        }
+
+        [TestMethod, TestCategory("Core")]
+        public void ComparisonChecksum()
+        {
+            //Ref
+            DocumentIdentity docA = new DocumentIdentity();
+            docA.FilePath = new FileInfo(fileA);
+            docA.State = IndexationStates.Indexed;
+            docA.Checksum = "AAAA";
+            
+            // Same checksum
+            DocumentIdentity docB = new DocumentIdentity();
+            docB.FilePath = new FileInfo(fileA);
+            docB.State = IndexationStates.Indexed;
+            docB.Checksum = "AAAA";
+            Assert.IsTrue(docA.CompareTo(docB) == 0, "Same files");
+            
+            // Same file, checksum differt
+            DocumentIdentity docC = new DocumentIdentity();
+            docC.FilePath = new FileInfo(fileA);
+            docC.State = IndexationStates.Indexed;
+            docC.Checksum = "CCCC";
+            Assert.IsFalse(docA.CompareTo(docC) == 0, "Not same files");
+
+        }
+    }
+}

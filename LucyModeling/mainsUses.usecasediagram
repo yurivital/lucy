@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="915bf46d-f1d1-4cdf-bcbd-e2e34752f92e" name="mainsUses" linkedPackageId="1e661a9d-2820-4e8f-956f-ba53f31a858d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="3dbbc5fe-933e-46b0-b8b5-49837321ab50">
+      <profileInstance Id="cb058c5b-2215-45c0-8ab6-b6fdf03ada61" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="edb3209f-4f88-4f06-9b8e-4b3b513762dc">
+      <profileInstance Id="fe84c9b9-fbdd-43b4-b7c9-998a0789bd05" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cf7aeaea-0690-4bc9-9295-275f8ab5b263">
+      <profileInstance Id="1370c74c-50ff-4c7d-8d04-1ecb5c42a2ef" name="CSharpProfile">
+        <elementDefinition Id="c0c92053-7fd5-4af6-b453-a00b0a0745a6" />
+      </profileInstance>
+      <elementDefinition Id="2f5274d2-1019-4d9f-ab59-a7a3f4da81cc" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5a92a2d7-985c-4c3b-af81-6d78e8b760fb" name="user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="692a9678-47c6-4bee-a346-0f9348f27ec3" />
+        <suppliersInternal>
+          <dependency Id="a48408d6-8d94-4b97-86b4-f29f5742eb3e" name="add to">
+            <useCaseMoniker Id="a14a6687-d250-44cc-a73b-519a6a103661" LastKnownName="document index" />
+            <elementDefinition Id="e1724ab0-7be3-4eec-9880-2a48bb5c456b" />
+          </dependency>
+          <dependency Id="ea938e97-ab83-462e-bf40-7b945620c5d0" name="perform">
+            <useCaseMoniker Id="79814358-1c5c-4da0-aca4-2596d6019cb0" LastKnownName="Search" />
+            <elementDefinition Id="00adcee0-b0ad-4a43-aafa-abc0973d6bc0" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a14a6687-d250-44cc-a73b-519a6a103661" name="document index" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="238959cf-8604-4acd-b602-ef9ce4f2f9c6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="79814358-1c5c-4da0-aca4-2596d6019cb0" name="Search" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d04724eb-63eb-49d4-a4e5-f5f5549ce304" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="1e661a9d-2820-4e8f-956f-ba53f31a858d" name="Lucy">
+    <elementDefinition Id="b6593392-0742-456e-93e6-970724fae553" />
+  </package>
+</useCaseModelRoot>

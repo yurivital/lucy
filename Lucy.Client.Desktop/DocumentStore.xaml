@@ -1,0 +1,87 @@
+﻿<Page x:Class="Lucy.Client.Desktop.DocumentStore"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      xmlns:ViewModel="clr-namespace:Lucy.Client.Desktop.ViewModel" 
+	    Title="DocumentStore"
+      Loaded="Page_Loaded"
+      >
+
+    <Page.DataContext>
+        <ViewModel:DocumentStoreViewModel />
+    </Page.DataContext>
+    <Grid Margin="50,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="600*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <StackPanel  Grid.Column="0"  Grid.ColumnSpan="2"
+			Grid.Row="0" Margin="10,10,10,5">
+            <Label  
+			Style="{StaticResource Header1}" 
+			Grid.ColumnSpan="3" Content="Document Store"/>
+            <Label  
+			Style="{StaticResource Header1}" 
+			Grid.ColumnSpan="3" Content="{ Binding ActiveWorkspace.Name}"/>
+            <Label 
+               Style="{StaticResource SubHeader1}"
+               Content="Build your document index and perfom search queries" >
+            </Label>
+        </StackPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <WrapPanel.DataContext>
+                <ViewModel:WorkspaceViewModel />
+            </WrapPanel.DataContext>
+            <Button Style="{StaticResource DeleteButton}"
+                    Command="{Binding RemoveWorkspaceCommand }" HorizontalAlignment="Left"
+            >
+                Delete</Button>
+        </WrapPanel>
+
+        <!-- Location bar -->
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" >
+            <GroupBox Header="Manage index">
+                <StackPanel>
+                    <WrapPanel>
+                        <Button Command="{Binding Index}" Style="{StaticResource ActionButton}"  >Perform index</Button>
+                    </WrapPanel>
+                    <Label>Locations</Label>
+                    <WrapPanel>
+                        <Button Style="{StaticResource ActionButton}" Command="{ Binding AddLocation}">Add location</Button>
+                        <Button Style="{StaticResource DeleteButton}" Command="{Binding RemoveLocation}">Remove</Button>
+                    </WrapPanel>
+                    <ListBox ItemsSource="{Binding LocationView}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Location}"></Label>
+                                    <Label>(</Label>
+                                    <Label Content="{Binding  LastDiscovered}"></Label>
+                                    <Label>-</Label>
+                                    <Label Content="{Binding  State}"></Label>
+                                    <Label>)</Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <!-- Query Bar -->
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Background="Beige" Margin="15">
+            <WrapPanel>
+                <TextBox FontSize="18" Width="400"></TextBox>
+
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>
