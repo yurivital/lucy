@@ -13,42 +13,41 @@
     <Page.DataContext>
         <ViewModel:DocumentStoreViewModel />
     </Page.DataContext>
-    <Grid Margin="50,0" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="600*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="80"/>
-        </Grid.RowDefinitions>
+    <StackPanel>
         <!-- Header -->
-        <StackPanel  Grid.Column="0"  Grid.ColumnSpan="2"
-			Grid.Row="0" Margin="10,10,10,5">
+        <StackPanel   Margin="10,10,10,5" Orientation="Horizontal">
             <Label  
 			Style="{StaticResource Header1}" 
 			Grid.ColumnSpan="3" Content="Document Store"/>
             <Label  
 			Style="{StaticResource Header1}" 
 			Grid.ColumnSpan="3" Content="{ Binding ActiveWorkspace.Name}"/>
-            <Label 
-               Style="{StaticResource SubHeader1}"
-               Content="Build your document index and perfom search queries" >
-            </Label>
+
         </StackPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <WrapPanel  HorizontalAlignment="Right" VerticalAlignment="Center">
             <WrapPanel.DataContext>
                 <ViewModel:WorkspaceViewModel />
             </WrapPanel.DataContext>
             <Button Style="{StaticResource DeleteButton}"
-                    Command="{Binding RemoveWorkspaceCommand }" HorizontalAlignment="Left"
-            >
+                    Command="{Binding RemoveWorkspaceCommand }" HorizontalAlignment="Left">
                 Delete</Button>
         </WrapPanel>
 
         <!-- Location bar -->
-        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" >
+        <StackPanel   >
+            <Label 
+               Style="{StaticResource SubHeader1}"
+               Content="Build your document index and perfom search queries" >
+            </Label>
+            <!-- Query Bar -->
+
+            <GroupBox Header="Perform search" Margin="0,0,0,10">
+
+                <WrapPanel>
+                    <TextBox FontSize="18" Width="400"></TextBox>
+
+                </WrapPanel>
+            </GroupBox>
             <GroupBox Header="Manage index">
                 <StackPanel>
                     <WrapPanel>
@@ -76,12 +75,6 @@
                 </StackPanel>
             </GroupBox>
         </StackPanel>
-        <!-- Query Bar -->
-        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Background="Beige" Margin="15">
-            <WrapPanel>
-                <TextBox FontSize="18" Width="400"></TextBox>
 
-            </WrapPanel>
-        </StackPanel>
-    </Grid>
+    </StackPanel>
 </Page>

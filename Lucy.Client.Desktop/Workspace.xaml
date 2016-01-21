@@ -11,16 +11,9 @@
     <Page.DataContext>
         <ViewModel:WorkspaceViewModel/>
     </Page.DataContext>
-    <Grid Margin="50,0" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600*"/>
-            <ColumnDefinition Width="400" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="80"/>
-        </Grid.RowDefinitions>
+    <StackPanel>
+
+
         <!-- Header -->
         <StackPanel  Grid.Column="0"  Grid.ColumnSpan="2"
 			Grid.Row="0" Margin="10,10,10,5">
@@ -32,16 +25,13 @@
                Content="Use workspaces for separating indexes."></Label>
         </StackPanel>
         <!-- Data view-->
-        <StackPanel Width="Auto" Margin="10,5"
-            Grid.Column="0"
-                    Grid.ColumnSpan="2"
-			Grid.Row="1" >
+        <StackPanel Width="Auto" Margin="10,5">
             <Button Margin="15,5,5,5" Style="{StaticResource ActionButton}"
                     Command="{Binding ToggleControl}" CommandParameter="{Binding ElementName=AddPanel}"
                     HorizontalAlignment="Left">Show Options</Button>
             <StackPanel Orientation="Horizontal" Margin="15,5,5,5" Visibility="Collapsed" Name="AddPanel" Background="#FFAA5829">
                 <TextBox Name="workspaceName" Width="150"></TextBox>
-                <Button Content="Add" Style="{StaticResource ActionButton}" Command="{Binding AddWorkspaceCommand}" CommandParameter="{Binding ElementName=workspaceName}"></Button> 
+                <Button Content="Add" Style="{StaticResource ActionButton}" Command="{Binding AddWorkspaceCommand}" CommandParameter="{Binding ElementName=workspaceName}"></Button>
             </StackPanel>
             <ListBox SelectionMode="Single" 
         		ItemsSource="{Binding CurrentWorkspaces}" Background="{x:Null}" BorderBrush="{x:Null}">
@@ -57,5 +47,5 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-    </Grid>
+    </StackPanel>
 </Page>
