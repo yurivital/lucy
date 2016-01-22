@@ -1,0 +1,44 @@
+﻿<Page x:Class="Lucy.Client.Desktop.Search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lucy.Client.Desktop"
+      mc:Ignorable="d" 
+      xmlns:ViewModel="clr-namespace:Lucy.Client.Desktop.ViewModel" 
+      
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Search">
+    <Page.DataContext>
+        <ViewModel:SearchViewModel />
+    </Page.DataContext>
+    <StackPanel>
+        <StackPanel   Margin="10,10,10,5" Orientation="Horizontal">
+            <Label  
+			Style="{StaticResource Header1}" 
+			 Content="Search"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Label 
+               Style="{StaticResource SubHeader1}"
+               Content="Perfom search queries" >
+            </Label>
+            <WrapPanel  HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Style="{StaticResource ActionButton}"
+                    Command="{Binding ManageIndex }" HorizontalAlignment="Left">
+                    Manage index</Button>
+            </WrapPanel>
+            <Label>Locations</Label>
+            <!-- Query Bar -->
+            <GroupBox Header="Perform search" Margin="0,0,0,10">
+
+
+                <WrapPanel>
+                    <TextBox FontSize="18" Width="400"></TextBox>
+                    <Button Command="{Binding PerformSearch}" Style="{StaticResource ActionButton}"></Button>
+                </WrapPanel>
+            </GroupBox>
+        </StackPanel>
+    </StackPanel>
+</Page>

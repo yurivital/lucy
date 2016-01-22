@@ -18,10 +18,10 @@
         <StackPanel   Margin="10,10,10,5" Orientation="Horizontal">
             <Label  
 			Style="{StaticResource Header1}" 
-			Grid.ColumnSpan="3" Content="Document Store"/>
+			 Content="Document Store"/>
             <Label  
 			Style="{StaticResource Header1}" 
-			Grid.ColumnSpan="3" Content="{ Binding ActiveWorkspace.Name}"/>
+		 Content="{ Binding ActiveWorkspace.Name}"/>
 
         </StackPanel>
         <WrapPanel  HorizontalAlignment="Right" VerticalAlignment="Center">
@@ -37,17 +37,9 @@
         <StackPanel   >
             <Label 
                Style="{StaticResource SubHeader1}"
-               Content="Build your document index and perfom search queries" >
+               Content="Build your document index" >
             </Label>
-            <!-- Query Bar -->
-
-            <GroupBox Header="Perform search" Margin="0,0,0,10">
-
-                <WrapPanel>
-                    <TextBox FontSize="18" Width="400"></TextBox>
-
-                </WrapPanel>
-            </GroupBox>
+           
             <GroupBox Header="Manage index">
                 <StackPanel>
                     <WrapPanel>

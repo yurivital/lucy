@@ -92,10 +92,8 @@ namespace Lucy.Client.Desktop.ViewModel
 
             var current = (WorkspaceModel)this.CurrentWorkspaces.CurrentItem;
             App.ActiveWorkSpace = current;
-            ((NavigationWindow)App.Current.MainWindow)
-                .Navigate(
-                new Uri("\\DocumentStore.xaml", UriKind.Relative),
-                current);
+
+            App.NavigateTo(Pages.SEARCH);
         }
 
         /// <summary>

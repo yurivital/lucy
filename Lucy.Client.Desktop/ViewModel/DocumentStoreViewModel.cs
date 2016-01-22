@@ -91,6 +91,9 @@ namespace Lucy.Client.Desktop.ViewModel
         /// </summary>
         public ICommand RemoveLocation { get; private set; }
 
+       
+
+
         /// <summary>
         /// Get the command that perform indexing
         /// </summary>
@@ -128,7 +131,6 @@ namespace Lucy.Client.Desktop.ViewModel
         public void OnLoadDocumentStore()
         {
             StoreModel = this._documentStoreService.LoadStore(this._workspaceLocation);
-
         }
 
         /// <summary>
@@ -170,6 +172,7 @@ namespace Lucy.Client.Desktop.ViewModel
             this.OnSaveDocumentStore();
         }
 
+        
         /// <summary>
         ///  Add the selected path in the location collection and persist the document store instance
         /// </summary>

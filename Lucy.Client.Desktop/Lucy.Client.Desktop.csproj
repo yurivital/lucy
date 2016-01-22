@@ -105,11 +105,27 @@
     </Compile>
     <Compile Include="Model\DocumentStoreModel.cs" />
     <Compile Include="Model\LocationModel.cs" />
+    <Compile Include="Pages.cs" />
+    <Compile Include="Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.xaml.cs">
+      <DependentUpon>SearchResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\DocumentStoreService.cs" />
     <Compile Include="Service\WorkspaceService.cs" />
     <Compile Include="ViewModel\DocumentStoreViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="ViewModel\WorkspaceViewModel.cs" />
     <Page Include="DocumentStore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
