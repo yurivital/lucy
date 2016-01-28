@@ -45,7 +45,7 @@ namespace Lucy.Document
         /// Documents for indexing
         /// </summary>
         
-        public ICollection<DocumentIdentity> DocumentIdentity
+        public List<DocumentIdentity> DocumentIdentity
         {
             get;
             set;
@@ -84,7 +84,7 @@ namespace Lucy.Document
             Contract.Assert(doc != null);
             Contract.Assert(doc.FilePath != null);
 
-            int nbOfPath = this.DocumentIdentity.Count(p => p.FilePath.FullName == doc.FilePath.FullName);
+            int nbOfPath = this.DocumentIdentity.Count(p => p.FilePath == doc.FilePath);
 
             if (nbOfPath == 0)
             {
@@ -159,15 +159,15 @@ namespace Lucy.Document
             // Metada
             Field docID = new Field("ID", doc.DocumentID, Field.Store.YES, Field.Index.NO, Field.TermVector.NO);
             lucenDoc.Add(docID);
-            Field docName = new Field("Name", doc.FilePath.Name, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
+            Field docName = new Field("Name", Path.GetFileName( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(docName);
-            Field docExtention = new Field("Extention", doc.FilePath.Extension, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
+            Field docExtention = new Field("Extention",Path.GetExtension( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(docExtention);
             Field docCRC = new Field("Checksum", doc.Checksum, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(docCRC);
-            Field locationField = new Field("Location", doc.FilePath.DirectoryName, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
+            Field locationField = new Field("Location", Path.GetDirectoryName( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(locationField);
-            Field dateField = new Field("Last modified", doc.FilePath.LastWriteTime.ToLongDateString(), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
+            Field dateField = new Field("Last modified",  File.GetLastWriteTime( doc.FilePath).ToLongDateString(), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(dateField);
             Field sizeField = new Field("Size", doc.FilePath.Length.ToString(), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(sizeField);

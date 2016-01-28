@@ -30,7 +30,7 @@ namespace Lucy.Core
         /// <summary>
         /// Uri of the ressource
         /// </summary>
-        public virtual FileInfo FilePath
+        public virtual String FilePath
         {
             get;
             set;
@@ -76,7 +76,7 @@ namespace Lucy.Core
                 return 1;
             }
 
-            if (this.FilePath.FullName != objB.FilePath.FullName)
+            if (this.FilePath != objB.FilePath)
             {
                 return 1;
             }

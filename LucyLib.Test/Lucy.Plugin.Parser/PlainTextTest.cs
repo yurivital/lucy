@@ -32,7 +32,7 @@ namespace Lucy.Test.Lucy.Plugin.Parser
             IParser plain = new PlainText();
             DocumentIdentity doc = new DocumentIdentity()
             {
-                FilePath = new FileInfo(@"Lucy.Plugin.Parser\plainText_3Chunks.txt")
+                FilePath = Path.GetFullPath(@"Lucy.Plugin.Parser\plainText_3Chunks.txt")
             };
             IEnumerable<DocumentChunk> chunks = plain.Parse(doc);
 
@@ -46,7 +46,7 @@ namespace Lucy.Test.Lucy.Plugin.Parser
             IParser plain = new PlainText();
             DocumentIdentity doc = new DocumentIdentity()
             {
-                FilePath = new FileInfo(@"Lucy.Plugin.Parser\plainText_0Chunks.txt")
+                FilePath = Path.GetFullPath(@"Lucy.Plugin.Parser\plainText_0Chunks.txt")
             };
             IEnumerable<DocumentChunk> chunks = plain.Parse(doc);
 

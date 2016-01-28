@@ -6,6 +6,7 @@ using Lucy.Extensibility;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,7 @@ namespace Lucy.Plugin.Parsers
             Contract.Result<IEnumerable<DocumentChunk>>();
             Contract.Ensures(result != null, "Empty collection can be returned but not null reference");
 
-            using (PdfReader reader = new PdfReader(document.FilePath.Open(System.IO.FileMode.Open)))
+            using (PdfReader reader = new PdfReader(File.Open(document.FilePath, FileMode.Open)))
             {
                 for (int i = 1; i <= reader.NumberOfPages; i++)
                 {

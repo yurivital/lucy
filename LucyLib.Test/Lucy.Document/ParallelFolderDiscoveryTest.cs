@@ -38,13 +38,16 @@ namespace Lucy.Test.Lucy.Document
             ICollection<DocumentIdentity> docs = discovery.Discover(location);
             foreach (var doc in docs)
             {
-                if(doc.FilePath.Length > 0)
-                { 
-                Assert.IsFalse(string.IsNullOrEmpty(doc.Checksum), "Non zero length document must be checksumed");
-                }
-                else
+                using (var stream = File.Open(doc.FilePath, FileMode.Open))
                 {
-                    Assert.IsTrue(string.IsNullOrEmpty(doc.Checksum), "Zero length Document must be checksumed");
+                    if (stream.Length > 0)
+                    {
+                        Assert.IsFalse(string.IsNullOrEmpty(doc.Checksum), "Non zero length document must be checksumed");
+                    }
+                    else
+                    {
+                        Assert.IsTrue(string.IsNullOrEmpty(doc.Checksum), "Zero length Document must be checksumed");
+                    }
                 }
             }
         }

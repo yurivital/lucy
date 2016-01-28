@@ -51,7 +51,7 @@ namespace Lucy.Document
                     identity.DocumentID = ComputeId(file.FullName);
                     identity.Checksum = ComputeChecksum(file);
                     identity.State = IndexationStates.NotIndexed;
-                    identity.FilePath = file;
+                    identity.FilePath = file.FullName;
                     identity.LastIndexed = null;
                     documents.Add(identity);
                 }

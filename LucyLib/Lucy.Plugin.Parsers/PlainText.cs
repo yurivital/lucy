@@ -35,7 +35,7 @@ namespace Lucy.Plugin.Parsers
             Contract.Result<IEnumerable<DocumentChunk>>();
             Contract.Ensures(result != null, "Empty collection can be returned but not null reference");
 
-            using (StreamReader reader = document.FilePath.OpenText())
+            using (StreamReader reader = File.OpenText(document.FilePath))
             {
                 DocumentChunk chunk = new DocumentChunk();
                 StringBuilder text = new StringBuilder();

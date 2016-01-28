@@ -42,7 +42,7 @@ namespace Lucy.Test.Lucy.Document
         [TestInitialize]
         public void Init()
         {
-            document1A.FilePath = new System.IO.FileInfo("TestMaterial\\Level 1\\document1A.txt");
+            document1A.FilePath = Path.GetFullPath("TestMaterial\\Level 1\\document1A.txt");
             document1A.State = IndexationStates.NotIndexed;
             document1A.DocumentID = "AA";
             document1A.Checksum = "ZZZZ";
@@ -52,10 +52,10 @@ namespace Lucy.Test.Lucy.Document
         [TestCleanup]
         public void CleanDir()
         {
-            Directory.Delete(IndexDir,true);
+            Directory.Delete(IndexDir, true);
         }
 
-       [TestMethod, TestCategory("Document")]
+        [TestMethod, TestCategory("Document")]
         public void TestAddDocumentToIndex()
         {
             DocumentIndex index = new DocumentIndex(IndexDir);
@@ -107,7 +107,7 @@ namespace Lucy.Test.Lucy.Document
             index.Add(document1A);
             index.Scan();
             var result = index.Search(
-                String.Format("Name:\"{0}\"", document1A.FilePath.Name));
+                String.Format("Name:\"{0}\"", Path.GetFileName(document1A.FilePath)));
             Assert.IsTrue(result.Count() == 1, "Should found 1 doc, found = {0}", result.Count());
         }
     }

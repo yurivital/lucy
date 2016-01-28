@@ -19,8 +19,8 @@ namespace Lucy.Test.Lucy.Plugin.Parser
         {
             IParser parser = new PortableDocumentFormat();
             DocumentIdentity doc = new DocumentIdentity();
-            doc.FilePath = new FileInfo(textPdfFile);
-             var chuncks =  parser.Parse(doc);
+            doc.FilePath = Path.GetFullPath(textPdfFile);
+            var chuncks =  parser.Parse(doc);
 
              Assert.IsTrue(chuncks.Count() > 0, "The PDF doc containt text");
         }

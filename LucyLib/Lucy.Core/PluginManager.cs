@@ -13,7 +13,7 @@ namespace Lucy.Core
     using System.Text;
     using System.ComponentModel.Composition;
     using System.ComponentModel.Composition.Hosting;
-
+    using System.IO;
     /// <summary>
     /// Manage the extensibity
     /// </summary>
@@ -57,7 +57,7 @@ namespace Lucy.Core
         public IParser GetParser(DocumentIdentity doc)
         {
             IParser parser = null;
-            Func<IParser, bool> predicate = (IParser p) => p.SupportedFileExtensions.Contains(doc.FilePath.Extension);
+            Func<IParser, bool> predicate = (IParser p) => p.SupportedFileExtensions.Contains(Path.GetExtension(doc.FilePath));
             if (Parsers.Count(predicate) == 1)
             {
                 parser = Parsers.Single(predicate);
