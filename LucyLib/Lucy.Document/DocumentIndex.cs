@@ -131,11 +131,14 @@ namespace Lucy.Document
         {
             OpenIndex();
 
+
             using (IndexWriter writer = new IndexWriter(
                    indexStore,
                     new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30),
                     IndexWriter.MaxFieldLength.UNLIMITED))
             {
+                writer.DeleteAll();
+                writer.Commit();
                 foreach (var doc in this.DocumentIdentity)
                 {
                     doc.State = IndexationStates.Indexing;
@@ -143,6 +146,7 @@ namespace Lucy.Document
                     doc.State = IndexationStates.Indexed;
                     doc.LastIndexed = DateTime.Now;
                 }
+                writer.Commit();
             }
         }
 
@@ -159,7 +163,7 @@ namespace Lucy.Document
             // Metada
             Field docID = new Field("ID", doc.DocumentID, Field.Store.YES, Field.Index.NO, Field.TermVector.NO);
             lucenDoc.Add(docID);
-            Field docName = new Field("Name", Path.GetFileName( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
+            Field docName = new Field("Name", Path.GetFileNameWithoutExtension( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(docName);
             Field docExtention = new Field("Extention",Path.GetExtension( doc.FilePath), Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.NO);
             lucenDoc.Add(docExtention);

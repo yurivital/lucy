@@ -6,9 +6,19 @@
       xmlns:local="clr-namespace:Lucy.Client.Desktop"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
+    xmlns:ViewModel="clr-namespace:Lucy.Client.Desktop.ViewModel" 
+      
       Title="SearchResult">
-
-    <Grid>
-        
-    </Grid>
+    <Page.DataContext>
+        <ViewModel:SearchResultViewModel />
+    </Page.DataContext>
+    <StackPanel>
+        <ListBox ItemsSource="{Binding Result}">
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <Label Content="{Binding FilePath}"></Label>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
 </Page>

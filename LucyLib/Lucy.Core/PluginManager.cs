@@ -57,7 +57,7 @@ namespace Lucy.Core
         public IParser GetParser(DocumentIdentity doc)
         {
             IParser parser = null;
-            Func<IParser, bool> predicate = (IParser p) => p.SupportedFileExtensions.Contains(Path.GetExtension(doc.FilePath));
+            Func<IParser, bool> predicate = (IParser p) => p.SupportedFileExtensions.Contains(Path.GetExtension(doc.FilePath).ToLower());
             if (Parsers.Count(predicate) == 1)
             {
                 parser = Parsers.Single(predicate);

@@ -14,14 +14,18 @@ namespace Lucy.Client.Desktop.Service
     public class DocumentStoreService : IDisposable
     {
 
-        private string documentLocationFile;
-        private DocumentIndex _storeIndex;
+        protected string documentLocationFile;
+        protected string documentLocationDocFile;
+
+        protected DocumentIndex _storeIndex;
         private XmlSerializer serializer = new XmlSerializer(typeof(DocumentStoreModel));
+        private XmlSerializer serializerIndex = new XmlSerializer(typeof(List<DocumentIdentity>));
 
         public DocumentStoreService()
         {
 
         }
+
 
         /// <summary>
         ///  Load the document store from workspace volume
@@ -29,54 +33,72 @@ namespace Lucy.Client.Desktop.Service
         /// <param name="workspaceFolder">Workspace location</param>
         public DocumentStoreModel LoadStore(string workspaceFolder)
         {
+            if (_storeIndex == null)
+            {
+                this._storeIndex = new DocumentIndex(workspaceFolder);
+
+            }
+
             DocumentStoreModel docStore = new DocumentStoreModel();
 
             documentLocationFile = Path.Combine(workspaceFolder, "DocumentStore.lucy");
+            documentLocationDocFile = Path.Combine(workspaceFolder, "DocumentStoreDoc.lucy");
+
+
             if (File.Exists(documentLocationFile))
             {
                 using (Stream stream = File.Open(documentLocationFile, FileMode.Open))
                 {
                     docStore = (DocumentStoreModel)serializer.Deserialize(stream);
-                 
                 }
+                using (Stream stream = File.Open(documentLocationDocFile, FileMode.Open))
+                {
+                    _storeIndex.DocumentIdentity = (List<DocumentIdentity>)serializerIndex.Deserialize(stream);
+                }
+
             }
-            this._storeIndex = new DocumentIndex(workspaceFolder);
+            
+
             this._storeIndex.PluginManager = new PluginManager();
             _storeIndex.PluginManager.Load();
-        
+
             return docStore;
         }
 
-        
+
         /// <summary>
         /// Save de document store to the workspace volume
         /// </summary>
         public void SaveStore(DocumentStoreModel model)
         {
+
             using (Stream stream = File.Open(documentLocationFile, FileMode.Create))
             {
                 serializer.Serialize(stream, model);
             }
+            using (Stream stream = File.Open(documentLocationDocFile, FileMode.Create))
+            {
+                serializerIndex .Serialize(stream, _storeIndex.DocumentIdentity);
+            }
+
         }
 
         public void Index(IList<DocumentLocation> locations)
         {
-            
-            foreach(var v in locations)
+
+            foreach (var v in locations)
             {
                 v.State = DiscoveryStates.Exploring;
                 IDiscovery disco = Document.DiscoveryProvider.GetDiscovery(v.Location);
-               
-                var docs = disco.Discover(v);
-                foreach(var doc in docs)
-                {
-                   
-                    this._storeIndex.DocumentIdentity.Add(doc);
 
+                var docs = disco.Discover(v);
+                foreach (var doc in docs)
+                {
+                    this._storeIndex.Add(doc);
                 }
                 v.State = DiscoveryStates.Explored;
             }
-           
+
             _storeIndex.Scan();
         }
 

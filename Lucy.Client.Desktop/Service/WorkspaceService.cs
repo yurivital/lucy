@@ -34,7 +34,8 @@ namespace Lucy.Client.Desktop.Service
                "Lucy",
                "Workspaces");
        }
-
+        
+     
        /// <summary>
        /// Load local workspaces
        /// </summary>

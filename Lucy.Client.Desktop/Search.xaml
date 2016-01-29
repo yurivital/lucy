@@ -35,8 +35,8 @@
 
 
                 <WrapPanel>
-                    <TextBox FontSize="18" Width="400"></TextBox>
-                    <Button Command="{Binding PerformSearch}" Style="{StaticResource ActionButton}"></Button>
+                    <TextBox FontSize="18" Width="400" Name="userQuery"></TextBox>
+                    <Button Command="{Binding PerformSearch}" Style="{StaticResource ActionButton}" CommandParameter="{Binding ElementName=userQuery,Path=Text}">Search</Button>
                 </WrapPanel>
             </GroupBox>
         </StackPanel>

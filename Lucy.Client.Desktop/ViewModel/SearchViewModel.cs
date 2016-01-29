@@ -1,7 +1,9 @@
-﻿using Microsoft.Practices.Prism.Commands;
+﻿using Lucy.Client.Desktop.Service;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +17,6 @@ namespace Lucy.Client.Desktop.ViewModel
         {
             this.PerformSearch = new DelegateCommand<string>(OnPerformSearch);
             this.ManageIndex = new DelegateCommand(OnManageIndex);
-
 
         }
         /// <summary>
@@ -32,7 +33,7 @@ namespace Lucy.Client.Desktop.ViewModel
             App.NavigateTo(Pages.RESULT);
         }
 
-        public void OnManageIndex ()
+        public void OnManageIndex()
         {
             App.NavigateTo(Pages.DOCUMENT_STORE);
         }
@@ -40,7 +41,7 @@ namespace Lucy.Client.Desktop.ViewModel
 
         public void Dispose()
         {
-            
+
         }
     }
 }

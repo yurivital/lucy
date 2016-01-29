@@ -5,6 +5,7 @@ using Lucy.Core;
 using Lucy.Extensibility;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,8 @@ using System.Threading.Tasks;
 
 namespace Lucy.Plugin.Parsers
 {
+    [Export(typeof(IParser))]
+    [ExportMetadata("Name", "PDF")]
     public class PortableDocumentFormat : IParser
     {
 

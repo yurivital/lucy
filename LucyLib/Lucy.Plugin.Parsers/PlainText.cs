@@ -60,7 +60,7 @@ namespace Lucy.Plugin.Parsers
                 if (text.Length > 0)
                 {
                     chunk.Text = text.ToString();
-                    chunk.Metadata = String.Format("Paragraph {0}", result.Count + 1);
+                    chunk.Metadata = "Content";
                     result.Add(chunk);
                 }
             }
@@ -84,7 +84,7 @@ namespace Lucy.Plugin.Parsers
         {
             get
             {
-                return new List<string>() { ".txt" };
+                return new List<string>() { ".txt", ".csv", ".md"  };
             }
 
         }

@@ -113,8 +113,10 @@
       <DependentUpon>SearchResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service\DocumentStoreService.cs" />
+    <Compile Include="Service\SearchService.cs" />
     <Compile Include="Service\WorkspaceService.cs" />
     <Compile Include="ViewModel\DocumentStoreViewModel.cs" />
+    <Compile Include="ViewModel\SearchResultViewModel.cs" />
     <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="ViewModel\WorkspaceViewModel.cs" />
     <Page Include="DocumentStore.xaml">
