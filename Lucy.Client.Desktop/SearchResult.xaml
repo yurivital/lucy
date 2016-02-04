@@ -13,12 +13,26 @@
         <ViewModel:SearchResultViewModel />
     </Page.DataContext>
     <StackPanel>
-        <ListBox ItemsSource="{Binding Result}">
-            <ListBox.ItemTemplate>
-                <DataTemplate >
-                    <Label Content="{Binding FilePath}"></Label>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <StackPanel   Margin="10,10,10,5">
+            <Label  
+			Style="{StaticResource Header1}" 
+			 Content="Result of the query"/>
+            <Label 
+               Style="{StaticResource SubHeader1}"
+               Content="{Binding Query}" >
+            </Label>
+        </StackPanel>
+        <StackPanel>
+            <ListBox ItemsSource="{Binding Result}" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="500px">
+                <ListBox.ItemTemplate>
+                    <DataTemplate >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding FilePath}"></Label>
+                            <Label Content="{Binding LastIndexed}"></Label>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </StackPanel>
 </Page>

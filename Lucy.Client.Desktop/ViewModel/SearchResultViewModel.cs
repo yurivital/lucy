@@ -25,21 +25,30 @@ namespace Lucy.Client.Desktop.ViewModel
             Result = new ListCollectionView(new ObservableCollection<DocumentIdentity>());
             string workspaceLocation = Path.Combine(this._workspaceService.WorkspaceFolder, App.ActiveWorkSpace.Name);
 
+            this.Query = App.SearchHistory.Last();
             _search.LoadStore(workspaceLocation);
             GetResultAsync();
 
         }
-        
+
         public ICollectionView Result { get; private set; }
+
+        private string _query = string.Empty;
+        public string Query
+        {
+            get { return _query; }
+            private set { SetProperty(ref _query, value); }
+        }
+
 
         public async void GetResultAsync()
         {
             var result = await Task.Run<IEnumerable<DocumentIdentity>>(() =>
             {
-                return _search.Search(App.SearchHistory.Last());
+                return _search.Search(this.Query);
             });
 
-            foreach(var r in result)
+            foreach (var r in result)
             {
                 ((ObservableCollection<DocumentIdentity>)Result.SourceCollection).Add(r);
             }
