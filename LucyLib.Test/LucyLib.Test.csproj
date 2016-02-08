@@ -55,6 +55,7 @@
     <Compile Include="Lucy.Document\ParallelFolderDiscoveryTest.cs" />
     <Compile Include="Core\DocumentIdentityTest.cs" />
     <Compile Include="Lucy.Document\DocumentIndexTest.cs" />
+    <Compile Include="Lucy.Plugin.Parser\PlainEmlTest.cs" />
     <Compile Include="Lucy.Plugin.Parser\PlainTextTest.cs" />
     <Compile Include="Lucy.Plugin.Parser\PortableDocumentFormatTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +88,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Lucy.Plugin.Parser\simpleMail.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TestMaterial\Level 1\OpenSL_ES_Specification_1.0.1.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

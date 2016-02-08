@@ -47,7 +47,7 @@ namespace Lucy.Test.Core
         {
             PluginManager pMan = new PluginManager();
             pMan.Load();
-            Assert.IsTrue(pMan.Parsers.Count() == 1, "There is 1 parser in the LucyLib");
+            Assert.IsTrue(pMan.Parsers.Count() == 3, "There is 3 parser in the LucyLib");
         }
         
     }

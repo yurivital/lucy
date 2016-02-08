@@ -107,7 +107,7 @@ namespace Lucy.Test.Lucy.Document
             index.Add(document1A);
             index.Scan();
             var result = index.Search(
-                String.Format("Name:\"{0}\"", Path.GetFileName(document1A.FilePath)));
+                String.Format("Name:\"{0}\"", Path.GetFileNameWithoutExtension(document1A.FilePath)));
             Assert.IsTrue(result.Count() == 1, "Should found 1 doc, found = {0}", result.Count());
         }
     }

@@ -73,6 +73,7 @@
     <Compile Include="Lucy.Document\IDiscovery.cs" />
     <Compile Include="Lucy.Document\LocationObserver.cs" />
     <Compile Include="Lucy.Extensibility\IParser.cs" />
+    <Compile Include="Lucy.Plugin.Parsers\PlainEml.cs" />
     <Compile Include="Lucy.Plugin.Parsers\PlainText.cs" />
     <Compile Include="Lucy.Plugin.Parsers\PortableDocumentFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
